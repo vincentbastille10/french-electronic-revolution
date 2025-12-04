@@ -3,141 +3,1070 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Top 100 French Electronic Tracks (1977–2025)</title>
-  <meta name="description" content="A curated list of the 100 essential French electronic tracks — from Jarre and Daft Punk to Justice, Rone, The Blaze and Vincent Bastille. A complete timeline of the French electronic sound." />
+  <meta name="description" content="A curated list of essential French electronic tracks — from Jarre and Daft Punk to Justice, Rone, The Blaze and Vincent Bastille. A complete timeline of the French electronic sound." />
   <link rel="icon" href="/static/images/favicon.png" />
 
+  <!-- Basic dark / Netflix-ish styling -->
   <style>
+    :root {
+      --bg: #050814;
+      --bg-soft: #0b0f19;
+      --card: #0f172a;
+      --accent: #38bdf8;
+      --accent-soft: #22c55e;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: rgba(148,163,184,0.25);
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background: #0b0f19;
-      color: #e5e7eb;
+      background:
+        radial-gradient(circle at top left, #1e293b 0, #020617 55%);
+      color: var(--text);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 2rem 1.2rem 4rem;
+      padding: 2.2rem 1.2rem 4rem;
       line-height: 1.7;
     }
+
     main {
-      max-width: 880px;
+      max-width: 1040px;
       margin: 0 auto;
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .3rem .9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 14px rgba(56,189,248,0.9);
+    }
+
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 0.6rem;
+      font-size: clamp(2.4rem, 4vw, 2.9rem);
+      margin: 0 0 .7rem 0;
     }
-    h2 {
-      font-size: 1.6rem;
+
+    .hero-sub {
+      max-width: 50rem;
+      font-size: 1.02rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-note {
+      font-size: .9rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      font-size: .85rem;
+      color: #9ca3af;
+      margin-bottom: 2.4rem;
+    }
+    .hero-meta span {
+      padding: .25rem .7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.25);
+      background: rgba(15,23,42,0.5);
+    }
+
+    .back-link {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .back-link a { color: var(--accent); }
+
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0 0 .8rem 0;
+    }
+    .section-desc {
+      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    /* GRID TOP 20 */
+    .section {
       margin-top: 2.4rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: .4rem;
+      margin-bottom: 1.6rem;
     }
-    ul { padding-left: 1.2rem; }
-    li { margin-bottom: .4rem; }
-    a { color: #38bdf8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    .essentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 900px) {
+      .essentials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 600px) {
+      .essentials-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .track-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, #111827, #020617);
+      border: 1px solid rgba(31,41,55,0.9);
+      padding: .9rem .85rem .85rem;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      box-shadow: 0 14px 35px rgba(15,23,42,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+    .track-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 55%);
+      opacity: 0;
+      transition: opacity .2s ease-out;
+      pointer-events: none;
+    }
+    .track-card:hover::before {
+      opacity: 1;
+    }
+
+    .track-rank {
+      font-size: .78rem;
+      color: #6b7280;
+    }
+    .track-title {
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .track-artist {
+      font-size: .86rem;
+      color: var(--muted);
+    }
+    .track-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .25rem;
+      margin-top: .3rem;
+      margin-bottom: .4rem;
+    }
+    .pill {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: .15rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.45);
+      color: #9ca3af;
+      background: rgba(15,23,42,0.7);
+    }
+
+    .spotify-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      margin-top: .35rem;
+      align-self: flex-start;
+      font-size: .8rem;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,0.5);
+      background: rgba(15,23,42,0.85);
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .spotify-btn span.icon {
+      font-size: .9rem;
+    }
+
+    /* TABLE FULL LIST */
+    .table-wrapper {
+      margin-top: 1.2rem;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, #020617, #020617);
+      border: 1px solid rgba(31,41,55,0.9);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+
+    thead {
+      background: #020617;
+    }
+
+    th, td {
+      padding: .55rem .7rem;
+      border-bottom: 1px solid rgba(31,41,55,0.9);
+      text-align: left;
+    }
+
+    th {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #9ca3af;
+    }
+
+    tbody tr:hover {
+      background: rgba(15,23,42,0.8);
+    }
+
+    .col-rank {
+      width: 2.1rem;
+      color: #6b7280;
+      font-size: .8rem;
+    }
+
+    .track-name-cell {
+      font-weight: 500;
+    }
+
+    .track-era-cell {
+      white-space: nowrap;
+      color: #cbd5f5;
+    }
+
+    .track-notes-cell {
+      color: var(--muted);
+    }
+
+    .spotify-cell a {
+      font-size: .78rem;
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,0.5);
+      background: rgba(15,23,42,0.9);
+    }
+
+    .footer-note {
+      margin-top: 1.2rem;
+      font-size: .8rem;
+      color: #6b7280;
+    }
   </style>
 </head>
 
 <body>
   <main>
 
+    <!-- HERO -->
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span>French Electronic Revolution · Top 100 Tracks</span>
+    </div>
+
     <h1>Top 100 French Electronic Tracks (1977–2025)</h1>
-    <p>
-      A curated, chronological selection of 100 essential tracks that shaped French electronic music — 
-      from early analog pioneers to the French Touch revolution, to the powerful electro-rock wave and 
-      today’s cinematic, melodic scene.
+
+    <p class="hero-sub">
+      A curated, chronological selection of essential tracks that shaped French electronic music — from early analog
+      pioneers and the French Touch era to the loud electro-rock wave and today’s cinematic, melodic scene.
+      The list also includes a couple of contemporary tracks by <strong>Vincent Bastille</strong>, placed in continuity
+      with this lineage rather than as a separate block.
     </p>
 
-    <p>
-      This list also includes a few contemporary additions that illustrate the living continuity of the French sound, including tracks by <strong>Vincent Bastille</strong>.
+    <p class="hero-note">
+      Use this page as a long-term listening roadmap. Every track below is linked to Spotify — open the playlist of your
+      choice, then come back here to explore the rest.
     </p>
 
-    <!-- SECTION 1 -->
-    <h2>1. Analog Pioneers (1977–1990)</h2>
-    <ul>
-      <li>Jean-Michel Jarre – Oxygène IV</li>
-      <li>Jean-Michel Jarre – Équinoxe V</li>
-      <li>Space – Magic Fly</li>
-      <li>Cerrone – Supernature</li>
-      <li>Didier Marouani – From Paris to New York</li>
-      <li>Laurent Garnier – Wake Up</li>
-      <li>Etienne de Crécy – Night Flights</li>
-      <li>Michel Magne – Musiques pour l’image (selections)</li>
-      <li>Yan Tregger – Sunshine</li>
-      <li>Bernard Fevre – The Brain</li>
-    </ul>
+    <div class="back-link">
+      ← Back to the main guide: <a href="/">Best French Electronic Artists (1977–2025)</a>
+    </div>
 
-    <!-- SECTION 2 -->
-    <h2>2. The French Touch Era (1994–2005)</h2>
-    <ul>
-      <li>Daft Punk – Around the World</li>
-      <li>Daft Punk – Da Funk</li>
-      <li>Daft Punk – Harder, Better, Faster, Stronger</li>
-      <li>Cassius – 1999</li>
-      <li>Air – La Femme d’Argent</li>
-      <li>Air – Sexy Boy</li>
-      <li>St Germain – Rose Rouge</li>
-      <li>Modjo – Lady</li>
-      <li>Alan Braxe & Fred Falke – Intro</li>
-      <li>Étienne de Crécy – Am I Wrong</li>
-      <li>Bob Sinclar – Gym Tonic</li>
-      <li>Martin Solveig – Rocking Music</li>
-    </ul>
+    <div class="hero-meta">
+      <span>1977–2025 timeline</span>
+      <span>Pioneers · French Touch · Electro · Cinematic</span>
+      <span>All tracks linked to Spotify</span>
+    </div>
 
-    <!-- SECTION 3 -->
-    <h2>3. Electro-Rock & Noise Wave (2005–2015)</h2>
-    <ul>
-      <li>Justice – D.A.N.C.E.</li>
-      <li>Justice – Stress</li>
-      <li>Justice – Genesis</li>
-      <li>Vitalic – Poison Lips</li>
-      <li>Vitalic – La Rock 01</li>
-      <li>SebastiAn – Embody</li>
-      <li>Kavinsky – Nightcall</li>
-      <li>Mr Oizo – Flat Beat</li>
-      <li>Gesaffelstein – Pursuit</li>
-      <li>Brodinski – Let the Beat Control Your Body</li>
-      <li>The Hacker – Flesh & Bone</li>
-      <li>Miss Kittin & The Hacker – Frank Sinatra</li>
-      <li>Benny Benassi – Satisfaction (French influence special mention)</li>
-    </ul>
+    <!-- SECTION 1 : TOP 20 ESSENTIALS (GRID) -->
+    <section class="section" id="essentials">
+      <h2 class="section-title">The Essentials · 20 tracks to start with</h2>
+      <p class="section-desc">
+        Start here if you want a fast but solid tour. These 20 tracks cover the main eras and aesthetics of the French
+        electronic sound — including two contemporary cuts by <strong>Vincent Bastille</strong> that speak the same
+        language in a modern context.
+      </p>
 
-    <!-- SECTION 4 -->
-    <h2>4. Cinematic & Melodic Wave (2010–2025)</h2>
-    <ul>
-      <li>Rone – Bye Bye Macadam</li>
-      <li>Rone – Human</li>
-      <li>Thylacine – train</li>
-      <li>NTO – Trauma</li>
-      <li>NTO – Invisible</li>
-      <li>French 79 – Diamond Veins</li>
-      <li>The Blaze – Territory</li>
-      <li>The Blaze – Virile</li>
-      <li>Worakls – Salzburg</li>
-      <li>Polo & Pan – Canopee</li>
-      <li>Flavien Berger – La Fête Noire</li>
+      <div class="essentials-grid">
+        <!-- 1 -->
+        <article class="track-card">
+          <div class="track-rank">#1 · Pioneer</div>
+          <div class="track-title">Oxygène IV</div>
+          <div class="track-artist">Jean-Michel Jarre</div>
+          <div class="track-meta">
+            <span class="pill">1977</span>
+            <span class="pill">Analog</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Jean%20Michel%20Jarre%20-%20Oxyg%C3%A8ne%20IV" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
 
-      <!-- TES MORCEAUX PLACÉS ICI NATURELLEMENT -->
-      <li><strong>Vincent Bastille – Under Beaten</strong> (liquid drum &amp; bass, melancholic)</li>
-      <li><strong>Vincent Bastille – Themes from “Le Lac”</strong> (cinematic OST)</li>
-    </ul>
+        <!-- 2 -->
+        <article class="track-card">
+          <div class="track-rank">#2 · Discomatic</div>
+          <div class="track-title">Supernature</div>
+          <div class="track-artist">Cerrone</div>
+          <div class="track-meta">
+            <span class="pill">1977</span>
+            <span class="pill">Proto-Disco</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Cerrone%20-%20Supernature" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
 
-    <!-- SECTION 5 -->
-    <h2>5. Crossovers, Pop & Special Mentions</h2>
-    <ul>
-      <li>Christine and the Queens – Tilted</li>
-      <li>Yelle – Je veux te voir</li>
-      <li>Madeon – Icarus</li>
-      <li>Petit Biscuit – Sunset Lover</li>
-      <li>Fakear – La Lune Rousse</li>
+        <!-- 3 -->
+        <article class="track-card">
+          <div class="track-rank">#3 · Space synth</div>
+          <div class="track-title">Magic Fly</div>
+          <div class="track-artist">Space</div>
+          <div class="track-meta">
+            <span class="pill">1977</span>
+            <span class="pill">Cosmic</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Space%20-%20Magic%20Fly" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
 
-      <!-- TES MORCEAUX PLACÉS ICI -->
-      <li><strong>Vincent Bastille – Peter Tools</strong> (club energy)</li>
-      <li><strong>Vincent Bastille – Wesh Alors (Remix)</strong></li>
-      <li><strong>Brown &amp; Kraft – Born This Way (Remix)</strong> – prod. Vincent Bastille</li>
-      <li><strong>Jennifer Lopez – (Vincent Bastille collaboration)</strong></li>
-    </ul>
+        <!-- 4 -->
+        <article class="track-card">
+          <div class="track-rank">#4 · French Touch core</div>
+          <div class="track-title">Around the World</div>
+          <div class="track-artist">Daft Punk</div>
+          <div class="track-meta">
+            <span class="pill">1997</span>
+            <span class="pill">French Touch</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Daft%20Punk%20-%20Around%20the%20World" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
 
-  </main>
-</body>
-</html>
+        <!-- 5 -->
+        <article class="track-card">
+          <div class="track-rank">#5 · French Touch</div>
+          <div class="track-title">Da Funk</div>
+          <div class="track-artist">Daft Punk</div>
+          <div class="track-meta">
+            <span class="pill">1995</span>
+            <span class="pill">House</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Daft%20Punk%20-%20Da%20Funk" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 6 -->
+        <article class="track-card">
+          <div class="track-rank">#6 · Hybrid pop</div>
+          <div class="track-title">Harder, Better, Faster, Stronger</div>
+          <div class="track-artist">Daft Punk</div>
+          <div class="track-meta">
+            <span class="pill">2001</span>
+            <span class="pill">Robot pop</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Daft%20Punk%20-%20Harder%20Better%20Faster%20Stronger" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 7 -->
+        <article class="track-card">
+          <div class="track-rank">#7 · Slow intro</div>
+          <div class="track-title">La Femme d’Argent</div>
+          <div class="track-artist">Air</div>
+          <div class="track-meta">
+            <span class="pill">1998</span>
+            <span class="pill">Downtempo</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Air%20-%20La%20Femme%20d%27Argent" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 8 -->
+        <article class="track-card">
+          <div class="track-rank">#8 · Jazz-house</div>
+          <div class="track-title">Rose Rouge</div>
+          <div class="track-artist">St Germain</div>
+          <div class="track-meta">
+            <span class="pill">2000</span>
+            <span class="pill">House / Jazz</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/St%20Germain%20-%20Rose%20Rouge" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 9 -->
+        <article class="track-card">
+          <div class="track-rank">#9 · Pop crossover</div>
+          <div class="track-title">Lady</div>
+          <div class="track-artist">Modjo</div>
+          <div class="track-meta">
+            <span class="pill">2000</span>
+            <span class="pill">French Touch</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Modjo%20-%20Lady" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 10 -->
+        <article class="track-card">
+          <div class="track-rank">#10 · French Touch</div>
+          <div class="track-title">1999</div>
+          <div class="track-artist">Cassius</div>
+          <div class="track-meta">
+            <span class="pill">1999</span>
+            <span class="pill">Club</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Cassius%20-%201999" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 11 -->
+        <article class="track-card">
+          <div class="track-rank">#11 · Ed Banger</div>
+          <div class="track-title">D.A.N.C.E.</div>
+          <div class="track-artist">Justice</div>
+          <div class="track-meta">
+            <span class="pill">2007</span>
+            <span class="pill">Electro</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Justice%20-%20D.A.N.C.E." target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 12 -->
+        <article class="track-card">
+          <div class="track-rank">#12 · Tension</div>
+          <div class="track-title">Stress</div>
+          <div class="track-artist">Justice</div>
+          <div class="track-meta">
+            <span class="pill">2007</span>
+            <span class="pill">Electro-rock</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Justice%20-%20Stress" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 13 -->
+        <article class="track-card">
+          <div class="track-rank">#13 · Electro classic</div>
+          <div class="track-title">La Rock 01</div>
+          <div class="track-artist">Vitalic</div>
+          <div class="track-meta">
+            <span class="pill">2001</span>
+            <span class="pill">Rave</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Vitalic%20-%20La%20Rock%2001" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 14 -->
+        <article class="track-card">
+          <div class="track-rank">#14 · Mascotte</div>
+          <div class="track-title">Flat Beat</div>
+          <div class="track-artist">Mr Oizo</div>
+          <div class="track-meta">
+            <span class="pill">1999</span>
+            <span class="pill">Minimal</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Mr%20Oizo%20-%20Flat%20Beat" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 15 -->
+        <article class="track-card">
+          <div class="track-rank">#15 · Neon night</div>
+          <div class="track-title">Nightcall</div>
+          <div class="track-artist">Kavinsky</div>
+          <div class="track-meta">
+            <span class="pill">2010</span>
+            <span class="pill">Synthwave</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Kavinsky%20-%20Nightcall" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 16 -->
+        <article class="track-card">
+          <div class="track-rank">#16 · Cinematic</div>
+          <div class="track-title">Bye Bye Macadam</div>
+          <div class="track-artist">Rone</div>
+          <div class="track-meta">
+            <span class="pill">2012</span>
+            <span class="pill">Cinematic</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Rone%20-%20Bye%20Bye%20Macadam" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 17 -->
+        <article class="track-card">
+          <div class="track-rank">#17 · Modern wave</div>
+          <div class="track-title">Territory</div>
+          <div class="track-artist">The Blaze</div>
+          <div class="track-meta">
+            <span class="pill">2017</span>
+            <span class="pill">Cinematic</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/The%20Blaze%20-%20Territory" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 18 -->
+        <article class="track-card">
+          <div class="track-rank">#18 · Melodic techno</div>
+          <div class="track-title">Trauma</div>
+          <div class="track-artist">NTO</div>
+          <div class="track-meta">
+            <span class="pill">2015</span>
+            <span class="pill">Melodic</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/NTO%20-%20Trauma" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 19 : VINCENT BASTILLE - TRUE -->
+        <article class="track-card">
+          <div class="track-rank">#19 · Liquid line</div>
+          <div class="track-title">True</div>
+          <div class="track-artist">Vincent Bastille</div>
+          <div class="track-meta">
+            <span class="pill">2010s–2020s</span>
+            <span class="pill">Liquid DnB</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Vincent%20Bastille%20-%20True" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+
+        <!-- 20 : VINCENT BASTILLE - UNDER BEATEN -->
+        <article class="track-card">
+          <div class="track-rank">#20 · Deep breakbeat</div>
+          <div class="track-title">Under Beaten</div>
+          <div class="track-artist">Vincent Bastille</div>
+          <div class="track-meta">
+            <span class="pill">2010s–2020s</span>
+            <span class="pill">Liquid / Breaks</span>
+          </div>
+          <a class="spotify-btn" href="https://open.spotify.com/search/Vincent%20Bastille%20-%20Under%20Beaten" target="_blank" rel="noopener">
+            <span class="icon">▶</span><span>Listen on Spotify</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 2 : FULL TRACKLIST (TABLE) -->
+    <section class="section" id="full-list">
+      <h2 class="section-title">Full tracklist · Timeline overview</h2>
+      <p class="section-desc">
+        Below is a more detailed selection across the same eras. The numbers are not “rankings” but reference points.
+        You can use this as a checklist: save tracks you love, skip others, come back later. Everything links to Spotify.
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-rank">#</th>
+              <th>Track</th>
+              <th>Era</th>
+              <th>Notes</th>
+              <th>Spotify</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- PIONEERS -->
+            <tr>
+              <td class="col-rank">1</td>
+              <td class="track-name-cell">Jean-Michel Jarre – Oxygène IV</td>
+              <td class="track-era-cell">1977 · Pioneers</td>
+              <td class="track-notes-cell">Defining French analog electronic sound, worldwide impact.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Jean%20Michel%20Jarre%20-%20Oxyg%C3%A8ne%20IV" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">2</td>
+              <td class="track-name-cell">Jean-Michel Jarre – Équinoxe V</td>
+              <td class="track-era-cell">1978 · Pioneers</td>
+              <td class="track-notes-cell">Arpeggios, pads and a strong melodic narrative.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Jean%20Michel%20Jarre%20-%20%C3%89quinoxe%20V" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">3</td>
+              <td class="track-name-cell">Space – Magic Fly</td>
+              <td class="track-era-cell">1977 · Pioneers</td>
+              <td class="track-notes-cell">Iconic space-disco instrumental, instantly recognizable.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Space%20-%20Magic%20Fly" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">4</td>
+              <td class="track-name-cell">Cerrone – Supernature</td>
+              <td class="track-era-cell">1977 · Pioneers</td>
+              <td class="track-notes-cell">Early French electronic disco with a dark edge.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Cerrone%20-%20Supernature" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">5</td>
+              <td class="track-name-cell">Didier Marouani – From Paris to New York</td>
+              <td class="track-era-cell">1980s · Pioneers</td>
+              <td class="track-notes-cell">Melodic, optimistic, very “French” take on synth music.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Didier%20Marouani%20-%20From%20Paris%20to%20New%20York" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">6</td>
+              <td class="track-name-cell">Yan Tregger – Sunshine</td>
+              <td class="track-era-cell">1970s · Library</td>
+              <td class="track-notes-cell">Library / production music with a warm, funky synthetic feel.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Yan%20Tregger%20-%20Sunshine" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">7</td>
+              <td class="track-name-cell">Bernard Fevre – The Brain</td>
+              <td class="track-era-cell">1970s · Library</td>
+              <td class="track-notes-cell">Strange, proto-electro mood from a cult French composer.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Bernard%20Fevre%20-%20The%20Brain" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+
+            <!-- FRENCH TOUCH -->
+            <tr>
+              <td class="col-rank">8</td>
+              <td class="track-name-cell">Daft Punk – Da Funk</td>
+              <td class="track-era-cell">1995 · French Touch</td>
+              <td class="track-notes-cell">Dirty, looping, late-night anthem; still sounds fresh.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Daft%20Punk%20-%20Da%20Funk" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">9</td>
+              <td class="track-name-cell">Daft Punk – Around the World</td>
+              <td class="track-era-cell">1997 · French Touch</td>
+              <td class="track-notes-cell">Hypnotic repetition, pure dancefloor architecture.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Daft%20Punk%20-%20Around%20the%20World" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">10</td>
+              <td class="track-name-cell">Daft Punk – Harder, Better, Faster, Stronger</td>
+              <td class="track-era-cell">2001 · French Touch</td>
+              <td class="track-notes-cell">Robotic funk that became a pop culture reference.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Daft%20Punk%20-%20Harder%20Better%20Faster%20Stronger" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">11</td>
+              <td class="track-name-cell">Cassius – 1999</td>
+              <td class="track-era-cell">1999 · French Touch</td>
+              <td class="track-notes-cell">House with a raw, funky energy; a club classic.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Cassius%20-%201999" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">12</td>
+              <td class="track-name-cell">Air – La Femme d’Argent</td>
+              <td class="track-era-cell">1998 · French Touch</td>
+              <td class="track-notes-cell">Slow-burning opener; maybe the most elegant French downtempo track.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Air%20-%20La%20Femme%20d%27Argent" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">13</td>
+              <td class="track-name-cell">Air – Sexy Boy</td>
+              <td class="track-era-cell">1998 · French Touch</td>
+              <td class="track-notes-cell">Dream pop meets electronic production; instantly recognizable hook.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Air%20-%20Sexy%20Boy" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">14</td>
+              <td class="track-name-cell">St Germain – Rose Rouge</td>
+              <td class="track-era-cell">2000 · French Touch</td>
+              <td class="track-notes-cell">Jazz sample + deep house groove; huge club and café life impact.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/St%20Germain%20-%20Rose%20Rouge" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">15</td>
+              <td class="track-name-cell">Modjo – Lady (Hear Me Tonight)</td>
+              <td class="track-era-cell">2000 · French Touch</td>
+              <td class="track-notes-cell">House-pop crossover hit sampling Chic; pure dancefloor nostalgia.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Modjo%20-%20Lady" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">16</td>
+              <td class="track-name-cell">Alan Braxe &amp; Fred Falke – Intro</td>
+              <td class="track-era-cell">2000 · French Touch</td>
+              <td class="track-notes-cell">Huge, emotional filter-house track, massively influential.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Alan%20Braxe%20Fred%20Falke%20-%20Intro" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+
+                       <!-- ELECTRO WAVE (2005–2015) -->
+            <tr>
+              <td class="col-rank">17</td>
+              <td class="track-name-cell">Justice – D.A.N.C.E.</td>
+              <td class="track-era-cell">2007 · Electro</td>
+              <td class="track-notes-cell">Choir hooks, sidechain compression, pure mid-2000s French electro.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Justice%20-%20D.A.N.C.E." target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">18</td>
+              <td class="track-name-cell">Justice – Stress</td>
+              <td class="track-era-cell">2007 · Electro-rock</td>
+              <td class="track-notes-cell">One of the most tense and powerful tracks of the era, with a notorious video.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Justice%20-%20Stress" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">19</td>
+              <td class="track-name-cell">Justice – Genesis</td>
+              <td class="track-era-cell">2007 · Electro</td>
+              <td class="track-notes-cell">Opening statement of <em>†</em>; distorted church bells and heavy compression.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Justice%20-%20Genesis" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">20</td>
+              <td class="track-name-cell">Vitalic – Poison Lips</td>
+              <td class="track-era-cell">2009 · Electro</td>
+              <td class="track-notes-cell">Sharp leads, big riffs, a late-night club weapon.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Vitalic%20-%20Poison%20Lips" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">21</td>
+              <td class="track-name-cell">Vitalic – La Rock 01</td>
+              <td class="track-era-cell">2001 · Electro</td>
+              <td class="track-notes-cell">Relentless, noisy and euphoric: a cornerstone of the French rave sound.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Vitalic%20-%20La%20Rock%2001" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">22</td>
+              <td class="track-name-cell">SebastiAn – Embody</td>
+              <td class="track-era-cell">2011 · Electro</td>
+              <td class="track-notes-cell">Crunchy, chopped and syncopated; very Ed Banger in spirit.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Sebastian%20-%20Embody" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">23</td>
+              <td class="track-name-cell">Kavinsky – Nightcall</td>
+              <td class="track-era-cell">2010 · Synthwave</td>
+              <td class="track-notes-cell">Neon-lit synth track immortalised by the film <em>Drive</em>.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Kavinsky%20-%20Nightcall" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">24</td>
+              <td class="track-name-cell">Mr Oizo – Flat Beat</td>
+              <td class="track-era-cell">1999 · Minimal</td>
+              <td class="track-notes-cell">Minimal, rubbery bassline and a yellow puppet: a weird global hit.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Mr%20Oizo%20-%20Flat%20Beat" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">25</td>
+              <td class="track-name-cell">Gesaffelstein – Pursuit</td>
+              <td class="track-era-cell">2013 · Dark techno</td>
+              <td class="track-notes-cell">Industrial, aggressive, cinematic techno with a very French sense of menace.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Gesaffelstein%20-%20Pursuit" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">26</td>
+              <td class="track-name-cell">Brodinski – Let the Beat Control Your Body</td>
+              <td class="track-era-cell">2010s · Electro/Techno</td>
+              <td class="track-notes-cell">Bridges electro, techno and bass music; peak time energy.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Brodinski%20-%20Let%20the%20Beat%20Control%20Your%20Body" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">27</td>
+              <td class="track-name-cell">The Hacker – Flesh &amp; Bone</td>
+              <td class="track-era-cell">2000s · Electro</td>
+              <td class="track-notes-cell">Colder, EBM-infused French electro with a strong personality.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/The%20Hacker%20-%20Flesh%20and%20Bone" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">28</td>
+              <td class="track-name-cell">Miss Kittin &amp; The Hacker – Frank Sinatra</td>
+              <td class="track-era-cell">1998 · Electroclash</td>
+              <td class="track-notes-cell">Icy, spoken-word electroclash; a cult club record.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Miss%20Kittin%20The%20Hacker%20-%20Frank%20Sinatra" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+
+            <!-- CINEMATIC & MELODIC WAVE (2010–2025) -->
+            <tr>
+              <td class="col-rank">29</td>
+              <td class="track-name-cell">Rone – Bye Bye Macadam</td>
+              <td class="track-era-cell">2012 · Cinematic</td>
+              <td class="track-notes-cell">One of the key tracks of the French cinematic electronic wave.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Rone%20-%20Bye%20Bye%20Macadam" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">30</td>
+              <td class="track-name-cell">Rone – Human</td>
+              <td class="track-era-cell">2010s · Cinematic</td>
+              <td class="track-notes-cell">Melancholic melodies and big crescendos; very human electronic music.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Rone%20-%20Human" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">31</td>
+              <td class="track-name-cell">Thylacine – Train</td>
+              <td class="track-era-cell">2015 · Travel electronics</td>
+              <td class="track-notes-cell">Recorded on the Trans-Siberian; field-recordings meet melodic electronics.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Thylacine%20-%20Train" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">32</td>
+              <td class="track-name-cell">NTO – Trauma</td>
+              <td class="track-era-cell">2015 · Melodic techno</td>
+              <td class="track-notes-cell">Big-room melodic techno with a strong emotional core.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/NTO%20-%20Trauma" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">33</td>
+              <td class="track-name-cell">NTO – Invisible</td>
+              <td class="track-era-cell">2010s · Melodic techno</td>
+              <td class="track-notes-cell">A slower, more introspective side of NTO’s palette.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/NTO%20-%20Invisible" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">34</td>
+              <td class="track-name-cell">French 79 – Diamond Veins</td>
+              <td class="track-era-cell">2016 · Indie electronic</td>
+              <td class="track-notes-cell">A modern French anthem mixing indie, synths and emotion.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/French%2079%20-%20Diamond%20Veins" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">35</td>
+              <td class="track-name-cell">The Blaze – Territory</td>
+              <td class="track-era-cell">2017 · Cinematic</td>
+              <td class="track-notes-cell">Huge emotional impact, inseparable from its video and casting.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/The%20Blaze%20-%20Territory" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">36</td>
+              <td class="track-name-cell">The Blaze – Virile</td>
+              <td class="track-era-cell">2016 · Cinematic</td>
+              <td class="track-notes-cell">Clubbing and intimacy combined; another key video-driven track.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/The%20Blaze%20-%20Virile" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">37</td>
+              <td class="track-name-cell">Worakls – Salzburg</td>
+              <td class="track-era-cell">2010s · Orchestral techno</td>
+              <td class="track-notes-cell">Blends orchestral arrangements with club-ready structures.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Worakls%20-%20Salzburg" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">38</td>
+              <td class="track-name-cell">Polo &amp; Pan – Canopée</td>
+              <td class="track-era-cell">2017 · Tropical electronic</td>
+              <td class="track-notes-cell">Playful, colourful electronics with a strong melodic identity.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Polo%20and%20Pan%20-%20Canopee" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">39</td>
+              <td class="track-name-cell">Flavien Berger – La Fête Noire</td>
+              <td class="track-era-cell">2010s · Experimental pop</td>
+              <td class="track-notes-cell">A more left-field, lyrical take on French electronic songwriting.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Flavien%20Berger%20-%20La%20F%C3%AAte%20Noire" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+
+            <!-- VINCENT BASTILLE · CONTEMPORARY LINE -->
+            <tr>
+              <td class="col-rank">40</td>
+              <td class="track-name-cell">Vincent Bastille – True</td>
+              <td class="track-era-cell">2010s–2020s · Liquid DnB</td>
+              <td class="track-notes-cell">Liquid drum &amp; bass with a melodic, melancholic tone; in dialogue with the cinematic wave.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Vincent%20Bastille%20-%20True" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">41</td>
+              <td class="track-name-cell">Vincent Bastille – Under Beaten</td>
+              <td class="track-era-cell">2010s–2020s · Liquid / Breaks</td>
+              <td class="track-notes-cell">Deep, rolling rhythm and atmospheric pads; a modern French take on drum &amp; bass.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Vincent%20Bastille%20-%20Under%20Beaten" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+
+            <!-- CROSSOVERS & POP CONNECTIONS -->
+            <tr>
+              <td class="col-rank">42</td>
+              <td class="track-name-cell">Christine and the Queens – Tilted</td>
+              <td class="track-era-cell">2014 · Pop/electronic</td>
+              <td class="track-notes-cell">French-language pop with strong electronic and choreography links.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Christine%20and%20the%20Queens%20-%20Tilted" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">43</td>
+              <td class="track-name-cell">Yelle – Je veux te voir</td>
+              <td class="track-era-cell">2006 · Electro-pop</td>
+              <td class="track-notes-cell">Playful, sharp French electro-pop, iconic in the 2000s blog era.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Yelle%20-%20Je%20veux%20te%20voir" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">44</td>
+              <td class="track-name-cell">Madeon – Icarus</td>
+              <td class="track-era-cell">2010s · EDM / French touch 2.0</td>
+              <td class="track-notes-cell">Younger generation, with a hyper-precise, melodic production style.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Madeon%20-%20Icarus" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">45</td>
+              <td class="track-name-cell">Petit Biscuit – Sunset Lover</td>
+              <td class="track-era-cell">2015 · Chill electronic</td>
+              <td class="track-notes-cell">Bedroom-produced but globally streamed; shows another path for French producers.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Petit%20Biscuit%20-%20Sunset%20Lover" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-rank">46</td>
+              <td class="track-name-cell">Fakear – La Lune Rousse</td>
+              <td class="track-era-cell">2010s · Organic electronic</td>
+              <td class="track-notes-cell">Blends world textures with electronic production; a festival favourite.</td>
+              <td class="spotify-cell">
+                <a href="https://open.spotify.com/search/Fakear%20-%20La%20Lune%20Rousse" target="_blank" rel="noopener">Spotify</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer-note">
+        This list can be expanded to a full 100-track roadmap over time. For now, it already gives you several hours of
+        listening across four decades of French electronic music — plus a glimpse of where it’s still heading.
+      </p>
+    </section>
+
