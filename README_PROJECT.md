@@ -1,0 +1,1 @@
+Projet French Electronic Revolution – structure FR/EN prête. Place sur GitHub + Render et adapte les HTML/MD selon tes besoins.
