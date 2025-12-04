@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daft Punk — French Electronic Revolution</title>
+  <meta name="description" content="Daft Punk are the most iconic duo of French electronic music. Discover how Homework and Discovery shaped the sound of the French Touch and global pop." />
+  <link rel="icon" href="/static/images/favicon.png" />
+  <style>
+    :root{--bg:#020617;--fg:#e5e7eb;--accent:#38bdf8;--muted:#9ca3af;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+      background:radial-gradient(circle at top,#020617 0,#000 55%),
+                radial-gradient(circle at bottom,#020617 0,#000 60%);
+      color:var(--fg);-webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    main{max-width:860px;margin:0 auto;padding:1.8rem 1.25rem 3rem;}
+    header{margin-bottom:1.8rem;display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;}
+    h1{font-size:clamp(2rem,3vw,2.5rem);margin:.2rem 0 .4rem}
+    p{font-size:.98rem;line-height:1.8;color:var(--muted);margin:.2rem 0 1rem}
+    .crumbs{font-size:.8rem;color:var(--muted);margin-bottom:.6rem;width:100%;}
+    .pill{
+      display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.4);padding:.2rem .7rem;font-size:.72rem;
+      text-transform:uppercase;letter-spacing:.16em;color:var(--muted);
+    }
+    img.artist{
+      width:120px;height:120px;border-radius:999px;
+      object-fit:cover;border:1px solid rgba(148,163,184,.7);
+    }
+    ul{padding-left:1.2rem}
+    li{color:var(--muted);margin-bottom:.35rem;font-size:.95rem;}
+    footer{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid rgba(30,41,59,.9);
+      font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.75rem;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="crumbs">
+        <a href="/">← Back to home</a> ·
+        <a href="/history/">History</a> ·
+        <a href="/french-touch-guide/">French Touch</a>
+      </div>
+      <img src="/static/images/daft_punk.png" alt="Daft Punk" class="artist" />
+      <div>
+        <div class="pill">Artist · French Touch</div>
+        <h1>Daft Punk</h1>
+        <p>
+          Daft Punk are the most recognisable duo in French electronic music. With
+          <em>Homework</em> and <em>Discovery</em>, they turned French house into a global
+          phenomenon, blending club culture, pop songwriting and a complete visual universe
+          built around their now legendary robot personas.
+        </p>
+      </div>
+    </header>
+
+    <h2>Why they matter</h2>
+    <p>
+      Few electronic acts have managed to be at the same time underground heroes, chart
+      regulars and cultural icons. Daft Punk did all three. Their early tracks connected
+      Parisian house parties to Chicago and Detroit, while their later work rewired pop music
+      itself by bringing electronic production into the heart of radio hits.
+    </p>
+
+    <h2>Signature elements</h2>
+    <ul>
+      <li>Heavy use of compression and side-chain to create a breathing, pumping sound.</li>
+      <li>Simple but extremely catchy melodic hooks and vocoder lines.</li>
+      <li>Sampling and re-contextualising forgotten disco, funk and rock records.</li>
+      <li>A strong narrative and visual identity around anonymity and futurism.</li>
+    </ul>
+
+    <h2>Key releases</h2>
+    <ul>
+      <li><em>Homework</em> (1997) — raw, club-focused French house.</li>
+      <li><em>Discovery</em> (2001) — a bright, pop-leaning album full of anthems.</li>
+      <li><em>Alive 2007</em> — a live album that redefined what an electronic show could be.</li>
+      <li><em>Random Access Memories</em> (2013) — a hybrid of live musicianship and studio craft.</li>
+    </ul>
+
+    <p>
+      In the <a href="/history/">history of French electronic music</a>, Daft Punk mark a
+      turning point: after them, French producers were no longer “local curiosities” but
+      central players in global pop culture.
+    </p>
+
+    <footer>
+      <span>&copy; <span id="year"></span> French Electronic Revolution · Vincent Bastille</span>
+      <span><a href="/">Back to home</a></span>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
