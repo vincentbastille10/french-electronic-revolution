@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>French Electronic Revolution — Guide to French Electronic Music (1977–2025)</title>
+  <meta name="description" content="A cinematic journey through French electronic music, from Jarre and Daft Punk to Rone and The Blaze. Explore timelines, guides, playlists and deep dives into the French Touch and the modern scene." />
+  <link rel="icon" href="/static/images/favicon.png" />
+
+  <!-- SEO JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "French Electronic Revolution",
+    "url": "https://french-electronic-revolution.onrender.com/",
+    "author": {
+      "@type": "Person",
+      "name": "Vincent Bastille"
+    },
+    "description": "A complete guide to French electronic music from 1977 to 2025.",
+    "keywords": "French electronic music, French Touch, Daft Punk, Jean-Michel Jarre, Rone, The Blaze, French 79, electronic music history"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --fg: #e5e7eb;
+      --accent: #38bdf8;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #000 55%),
+                  radial-gradient(circle at bottom, #020617 0, #000 60%);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.4rem 4rem;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      margin-bottom: .7rem;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    nav {
+      margin-top: 2.4rem;
+      display: grid;
+      gap: 1.2rem;
+    }
+    nav a {
+      display: block;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: .6rem;
+      font-size: 1.05rem;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(4px);
+      transition: 0.15s;
+    }
+    nav a:hover {
+      background: rgba(56,189,248,0.12);
+      border-color: var(--accent);
+    }
+    footer {
+      margin-top: 3.4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(148,163,184,0.25);
+      text-align: center;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>French Electronic Revolution</h1>
+    <p>
+      A cinematic, curated exploration of French electronic music from 1977 to 2025 — connecting
+      the pioneers, the French Touch, the electro-rock wave of the 2000s, and the emotional,
+      visual sound of today.  
+      Discover how Jarre, Daft Punk, Justice, Rone, The Blaze, French 79, NTO and others shaped
+      a unique identity in global electronic culture.
+    </p>
+
+    <p style="margin-top:1.4rem;">
+      Start exploring with the guides below:
+    </p>
+
+    <nav>
+      <a href="/history/">📘 History of French Electronic Music (1977–2025)</a>
+      <a href="/french-touch-guide/">💿 French Touch — A Complete Beginner’s Guide</a>
+      <a href="/cinematic-wave/">🎬 The Cinematic Wave (2010–2025)</a>
+      <a href="https://open.spotify.com/playlist/3IpHRRhNVlnK4E85A9I9fH" target="_blank">🎧 Listen to the 1977–2025 Playlist</a>
+    </nav>
+
+    <footer>
+      © <span id="year"></span> French Electronic Revolution — Created by Vincent Bastille
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
