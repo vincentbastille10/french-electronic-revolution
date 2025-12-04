@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Google News / Discover crawling
+User-agent: Googlebot-News
+Allow: /
+
+# Sitemap
+Sitemap: https://french-electronic-revolution.onrender.com/sitemap.xml
