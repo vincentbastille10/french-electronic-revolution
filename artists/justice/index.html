@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Justice — French Electronic Revolution</title>
+  <meta name="description" content="Justice pushed French electronic music into a loud, rock-influenced direction, reinventing the sound of the 2000s." />
+  <link rel="icon" href="/static/images/favicon.png" />
+  <style>
+    :root{--bg:#020617;--fg:#e5e7eb;--accent:#38bdf8;--muted:#9ca3af;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+      background:radial-gradient(circle at top,#020617 0,#000 55%),
+                radial-gradient(circle at bottom,#020617 0,#000 60%);
+      color:var(--fg);-webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    main{max-width:860px;margin:0 auto;padding:1.8rem 1.25rem 3rem;}
+    header{margin-bottom:1.8rem;display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;}
+    h1{font-size:clamp(2rem,3vw,2.5rem);margin:.2rem 0 .4rem}
+    p{font-size:.98rem;line-height:1.8;color:var(--muted);margin:.2rem 0 1rem}
+    .crumbs{font-size:.8rem;color:var(--muted);margin-bottom:.6rem;width:100%;}
+    .pill{
+      display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.4);padding:.2rem .7rem;font-size:.72rem;
+      text-transform:uppercase;letter-spacing:.16em;color:var(--muted);
+    }
+    img.artist{
+      width:120px;height:120px;border-radius:999px;
+      object-fit:cover;border:1px solid rgba(148,163,184,.7);
+    }
+    ul{padding-left:1.2rem}
+    li{color:var(--muted);margin-bottom:.35rem;font-size:.95rem;}
+    footer{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid rgba(30,41,59,.9);
+      font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.75rem;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="crumbs">
+        <a href="/">← Back to home</a> ·
+        <a href="/history/">History</a>
+      </div>
+      <img src="/static/images/justice.png" alt="Justice" class="artist" />
+      <div>
+        <div class="pill">Artist · Electro wave</div>
+        <h1>Justice</h1>
+        <p>
+          Justice brought a new, aggressive energy to French electronic music in the 2000s.
+          Their sound combined distorted basslines, rock aesthetics and a strong sense of
+          drama that resonated far beyond traditional club scenes.
+        </p>
+      </div>
+    </header>
+
+    <h2>Crunch, distortion and drama</h2>
+    <p>
+      Where French Touch leaned towards smoothness and groove, Justice leaned towards crunch
+      and shock. Their debut album <em>Cross</em> sounded like a compressed wall of sound,
+      yet every track was carefully structured and full of hooks, making it as memorable as
+      it was noisy.
+    </p>
+
+    <h2>Signature elements</h2>
+    <ul>
+      <li>Gritty, distorted bass and synth lines.</li>
+      <li>Heavy side-chain compression and maximalist mixes.</li>
+      <li>References to rock, metal and classical music in both sound and visuals.</li>
+      <li>Strong, iconic logo and stage design contributing to their mythos.</li>
+    </ul>
+
+    <h2>Key releases</h2>
+    <ul>
+      <li><em>† (Cross)</em> (2007)</li>
+      <li><em>Audio, Video, Disco</em> (2011)</li>
+      <li><em>Woman</em> (2016)</li>
+    </ul>
+
+    <footer>
+      <span>&copy; <span id="year"></span> French Electronic Revolution · Vincent Bastille</span>
+      <span><a href="/">Back to home</a></span>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
