@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jean-Michel Jarre — French Electronic Revolution</title>
+  <meta name="description" content="Jean-Michel Jarre is one of the pioneers of French electronic music, turning synthesizers into large-scale, poetic spectacles." />
+  <link rel="icon" href="/static/images/favicon.png" />
+  <style>
+    :root{--bg:#020617;--fg:#e5e7eb;--accent:#38bdf8;--muted:#9ca3af;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+      background:radial-gradient(circle at top,#020617 0,#000 55%),
+                radial-gradient(circle at bottom,#020617 0,#000 60%);
+      color:var(--fg);-webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    main{max-width:860px;margin:0 auto;padding:1.8rem 1.25rem 3rem;}
+    header{margin-bottom:1.8rem;display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;}
+    h1{font-size:clamp(2rem,3vw,2.5rem);margin:.2rem 0 .4rem}
+    p{font-size:.98rem;line-height:1.8;color:var(--muted);margin:.2rem 0 1rem}
+    .crumbs{font-size:.8rem;color:var(--muted);margin-bottom:.6rem;width:100%;}
+    .pill{
+      display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.4);padding:.2rem .7rem;font-size:.72rem;
+      text-transform:uppercase;letter-spacing:.16em;color:var(--muted);
+    }
+    img.artist{
+      width:120px;height:120px;border-radius:999px;
+      object-fit:cover;border:1px solid rgba(148,163,184,.7);
+    }
+    ul{padding-left:1.2rem}
+    li{color:var(--muted);margin-bottom:.35rem;font-size:.95rem;}
+    footer{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid rgba(30,41,59,.9);
+      font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.75rem;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="crumbs">
+        <a href="/">← Back to home</a> ·
+        <a href="/history/">History</a>
+      </div>
+      <img src="/static/images/jean_michel_jarre.png" alt="Jean-Michel Jarre" class="artist" />
+      <div>
+        <div class="pill">Artist · Pioneer</div>
+        <h1>Jean-Michel Jarre</h1>
+        <p>
+          Jean-Michel Jarre is one of the earliest and most influential voices in French
+          electronic music. With albums like <em>Oxygène</em> and <em>Équinoxe</em>, he
+          transformed synthesizers into tools for widescreen, contemplative soundscapes.
+        </p>
+      </div>
+    </header>
+
+    <h2>From experimental to monumental</h2>
+    <p>
+      Jarre’s music bridges experimental electronic sound design and accessible, melodic
+      composition. His large-scale outdoor concerts — often staged in front of monuments,
+      skylines or industrial structures — turned electronic music into a public spectacle,
+      long before EDM festivals existed.
+    </p>
+
+    <h2>Signature elements</h2>
+    <ul>
+      <li>Long, evolving synth lines and arpeggios.</li>
+      <li>Strong use of stereo image and spatialisation.</li>
+      <li>Slow-moving harmonies that feel both futuristic and nostalgic.</li>
+      <li>A visual language built around light, lasers and architecture.</li>
+    </ul>
+
+    <h2>Key releases</h2>
+    <ul>
+      <li><em>Oxygène</em> (1976)</li>
+      <li><em>Équinoxe</em> (1978)</li>
+      <li><em>Les Concerts en Chine</em> (1982)</li>
+    </ul>
+
+    <p>
+      Jarre’s legacy can be heard across the
+      <a href="/history/">entire history of French electronic music</a>, from ambient and
+      film scores to the more cinematic wave of the 2010s.
+    </p>
+
+    <footer>
+      <span>&copy; <span id="year"></span> French Electronic Revolution · Vincent Bastille</span>
+      <span><a href="/">Back to home</a></span>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
