@@ -1,46 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best French Electronic Artists (1977–2025)</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>French Electronic Revolution — Best French Electronic Artists (1977–2025)</title>
+
+  <!-- SEO -->
+  <meta name="description" content="A cinematic guide to French electronic music from 1977 to 2025 — from Jarre and Cerrone to Daft Punk, Justice, Rone, The Blaze and the new generation. Curated by French producer Vincent Bastille." />
+  <link rel="canonical" href="https://french-electronic-revolution.onrender.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="French Electronic Revolution — Best French Electronic Artists (1977–2025)" />
+  <meta property="og:description" content="Discover the artists who shaped French electronic music: pioneers, French Touch, the loud 2000s electro wave and the cinematic movement of 2010–2025." />
+  <meta property="og:url" content="https://french-electronic-revolution.onrender.com/" />
+  <meta property="og:image" content="https://french-electronic-revolution.onrender.com/static/images/french-electronic-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="French Electronic Revolution — Best French Electronic Artists (1977–2025)" />
+  <meta name="twitter:description" content="A curated, cinematic guide to French electronic music from 1977 to 2025." />
+  <meta name="twitter:image" content="https://french-electronic-revolution.onrender.com/static/images/french-electronic-cover.jpg" />
+
+  <!-- Basic reset / font -->
+  <style>
+    :root {
+      --bg: #050814;
+      --bg-soft: #0b1020;
+      --accent: #38bdf8;
+      --accent-soft: #22c55e;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: #1f2937;
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+      color: var(--text);
+    }
+    a { color: var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem 1.5rem;
+    }
+
+    .badge {
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      font-size:.75rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color: var(--muted);
+      border-radius:999px;
+      padding:.35rem .9rem;
+      border:1px solid rgba(148,163,184,0.5);
+      background:rgba(15,23,42,0.9);
+      margin-bottom:1.25rem;
+    }
+    .badge-dot {
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 14px rgba(56,189,248,0.9);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 4vw, 3.1rem);
+      line-height:1.1;
+      margin:0 0 1rem 0;
+      color:#f9fafb;
+    }
+
+    .hero-sub {
+      font-size:1.02rem;
+      line-height:1.7;
+      color:var(--muted);
+      max-width: 48rem;
+      margin-bottom:2.2rem;
+    }
+
+    .hero-highlight {
+      font-weight:600;
+      color:#e5e7eb;
+    }
+
+    .cta-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-bottom:2.5rem;
+    }
+    .btn-main, .btn-ghost {
+      border-radius: var(--radius-xl);
+      padding: .95rem 1.5rem;
+      font-size:.95rem;
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      border:1px solid transparent;
+      box-shadow:0 16px 35px rgba(15,23,42,0.6);
+    }
+    .btn-main {
+      background:linear-gradient(120deg, var(--accent-soft), var(--accent));
+      color:#020617;
+    }
+    .btn-main span.icon {
+      font-size:1.2rem;
+    }
+    .btn-ghost {
+      background:rgba(15,23,42,0.9);
+      border-color:rgba(148,163,184,0.6);
+      color:#e5e7eb;
+    }
+
+    .hero-meta {
+      font-size:.85rem;
+      color:#64748b;
+      margin-bottom:3rem;
+    }
+
+    .grid-two {
+      display:grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap:2rem;
+      margin-bottom:3rem;
+    }
+    @media (max-width: 880px) {
+      .grid-two { grid-template-columns:1fr; }
+    }
+
+    .card {
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(2,6,23,0.98));
+      border:1px solid rgba(30,64,175,0.6);
+      padding:1.8rem 1.5rem;
+    }
+    .card h2 {
+      margin-top:0;
+      margin-bottom:1rem;
+      font-size:1.25rem;
+    }
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-bottom:1rem;
+    }
+    .pill {
+      font-size:.8rem;
+      padding:.35rem .7rem;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.4);
+      color:var(--muted);
+    }
+
+    .section-title {
+      font-size:1.1rem;
+      font-weight:600;
+      margin-bottom:1rem;
+      margin-top:0;
+    }
+    .artists-table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:.92rem;
+      margin-bottom:2.2rem;
+    }
+    .artists-table th,
+    .artists-table td {
+      padding:.6rem .5rem;
+      border-bottom:1px solid rgba(31,41,55,0.9);
+      vertical-align:top;
+    }
+    .artists-table th {
+      text-align:left;
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:#9ca3af;
+    }
+    .artists-era {
+      white-space:nowrap;
+      color:#cbd5f5;
+      font-weight:600;
+    }
+    .artists-list strong {
+      color:#e5e7eb;
+    }
+    .artists-note {
+      color:var(--muted);
+    }
+
+    .spotlight {
+      border-radius: var(--radius-xl);
+      border:1px solid rgba(56,189,248,0.4);
+      background: radial-gradient(circle at top left, rgba(21,94,117,0.45), rgba(15,23,42,0.98));
+      padding:1.8rem 1.5rem;
+      margin-bottom:2.5rem;
+    }
+
+    .footer {
+      margin-top:2rem;
+      font-size:.8rem;
+      color:#6b7280;
+      border-top:1px solid rgba(31,41,55,0.9);
+      padding-top:1.25rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      justify-content:space-between;
+    }
+  </style>
+
+  <!-- JSON-LD structured data (basic) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "French Electronic Revolution",
+    "url": "https://french-electronic-revolution.onrender.com/",
+    "description": "A curated guide to French electronic music from 1977 to 2025.",
+    "author": {
+      "@type": "Person",
+      "name": "Vincent Bastille"
+    }
+  }
+  </script>
 </head>
 
-<body style="background:#0b0e13;font-family:Inter,system-ui,sans-serif;margin:0;padding:0;color:#e2e8f0;">
-  
-  <section style="max-width:900px;margin:0 auto;padding:3rem 1.5rem;">
+<body>
+  <main class="page">
 
-    <p style="font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:#60a5fa;margin-bottom:1rem;">
-      ● Guide · French Electronic Music
-    </p>
+    <!-- HERO -->
+    <header>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Guide · French Electronic Music · 1977–2025</span>
+      </div>
 
-    <h1 style="font-size:2.75rem;font-weight:700;color:white;margin-bottom:1.25rem;line-height:1.15;">
-      Best French Electronic Artists (1977–2025)
-    </h1>
+      <h1>Best French Electronic Artists (1977–2025)</h1>
 
-    <p style="font-size:1.1rem;color:#94a3b8;line-height:1.6;margin-bottom:2rem;">
-      A dark, cinematic guide to the artists who shaped French electronic music — from Jean-Michel Jarre 
-      and Cerrone to Daft Punk, Air, Justice, Rone and the new scene — with a spotlight on 
-      <strong>Vincent Bastille</strong>, a French electronic producer with 400+ tracks spanning liquid drum & bass,
-      cinematic ambient and modern club music.
-    </p>
+      <p class="hero-sub">
+        A dark, cinematic guide to the artists who shaped French electronic music — from Jean-Michel Jarre and Cerrone
+        to Daft Punk, Air, Justice, Rone and the new scene. The project is curated by
+        <span class="hero-highlight">Vincent Bastille</span>, a French electronic producer with 400+ tracks spanning
+        liquid drum &amp; bass, cinematic ambient and modern club music.
+      </p>
 
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
-        <a href="/french-touch-guide/index.html"
-           style="background:linear-gradient(90deg,#6ee7b7,#3b82f6);padding:1rem 1.5rem;border-radius:12px;
-                  color:#0f172a;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;">
-            🎧 French Touch 1977–2025 Playlist
+      <div class="cta-row">
+        <a class="btn-main"
+           href="https://open.spotify.com/playlist/XXXXXXXXXXXX" target="_blank" rel="noopener">
+          <span class="icon">🎧</span>
+          <span>French Touch 1977–2025 Playlist</span>
         </a>
 
-        <a href="/kindle/index.html"
-           style="padding:1rem 1.5rem;border:1px solid #64748b;border-radius:12px;
-                  color:#e2e8f0;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;">
-            📘 Read the book (Kindle text)
+        <a class="btn-ghost" href="/kindle/index.html">
+          <span>📘 Read the full book (Kindle text)</span>
         </a>
-    </div>
 
-  </section>
+        <a class="btn-ghost" href="/top-100/index.html">
+          <span>⭐ Top 100 essential tracks</span>
+        </a>
+      </div>
 
+      <div class="hero-meta">
+        Start with the big picture below, or jump directly to the
+        <a href="#eras">key eras and artists</a>.
+      </div>
+    </header>
+
+    <!-- OVERVIEW GRID -->
+    <section class="grid-two">
+
+      <article class="card">
+        <h2>How this guide is structured</h2>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:1rem;">
+          French Electronic Revolution is designed for listeners who already love electronic music, but want to
+          understand why the French scene is so particular. The site is split into three main lenses:
+        </p>
+        <ul style="color:var(--muted);padding-left:1.1rem;line-height:1.6;margin-bottom:1rem;">
+          <li><strong>History (1977–2025)</strong> — a narrative overview of the key moments.</li>
+          <li><strong>French Touch</strong> — the house/disco wave that changed global club culture.</li>
+          <li><strong>The Cinematic Wave</strong> — 2010–2025, where image, story and emotion take center stage.</li>
+        </ul>
+
+        <div class="pill-row">
+          <a class="pill" href="/history/">History (1977–2025)</a>
+          <a class="pill" href="/french-touch-guide/">French Touch guide</a>
+          <a class="pill" href="/cinematic-wave/">Cinematic wave focus</a>
+        </div>
+
+        <p style="color:var(--muted);font-size:.9rem;">
+          Each page is written in plain English, with links, albums and a playlist to move from theory to listening.
+        </p>
+      </article>
+
+      <aside class="card">
+        <h2>Quick navigation</h2>
+        <ul style="list-style:none;padding-left:0;margin:0;color:var(--muted);font-size:.9rem;line-height:1.7;">
+          <li>• <a href="#eras">Key eras &amp; artists (overview)</a></li>
+          <li>• <a href="#pioneers">Pioneers &amp; prehistory</a></li>
+          <li>• <a href="#french-touch">French Touch &amp; 90s house</a></li>
+          <li>• <a href="#electro-2000s">Loud 2000s electro wave</a></li>
+          <li>• <a href="#cinematic-wave">Cinematic wave (2010–2025)</a></li>
+          <li>• <a href="#vincent-bastille">Spotlight: Vincent Bastille</a></li>
+          <li>• <a href="/top-100/index.html">Top 100 tracks list</a></li>
+        </ul>
+      </aside>
+
+    </section>
+
+    <!-- KEY ERAS TABLE -->
+    <section id="eras">
+      <h2 class="section-title">Key eras and artists at a glance</h2>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:1.25rem;">
+        This table gives you a fast overview before you dive into each dedicated page. It mixes pioneers, French Touch
+        legends, the noisy 2000s and the more recent cinematic movement.
+      </p>
+
+      <div style="overflow-x:auto;">
+        <table class="artists-table">
+          <thead>
+            <tr>
+              <th>Era</th>
+              <th>Artists</th>
+              <th>Essentials to start with</th>
+              <th>Where to go on this site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="pioneers">
+              <td class="artists-era">1977–1988<br/>Pioneers</td>
+              <td class="artists-list">
+                <strong>Jean-Michel Jarre</strong>, Cerrone, Space, Didier Marouani, early soundtrack &amp; library composers.
+              </td>
+              <td class="artists-note">
+                Jarre – <em>Oxygène</em>, <em>Équinoxe</em>; Cerrone – <em>Supernature</em>; Space – <em>Magic Fly</em>.
+              </td>
+              <td class="artists-note">
+                Read the <a href="/history/">History</a> intro and then jump straight into the playlist’s first decade.
+              </td>
+            </tr>
+            <tr id="french-touch">
+              <td class="artists-era">1990s<br/>French Touch</td>
+              <td class="artists-list">
+                <strong>Daft Punk</strong>, Cassius, Étienne de Crécy, Motorbass, Air, St Germain, Bob Sinclar, Modjo.
+              </td>
+              <td class="artists-note">
+                Daft Punk – <em>Homework</em>, <em>Discovery</em>; Air – <em>Moon Safari</em>; St Germain – <em>Tourist</em>;
+                Super Discount, Cassius 1999, Modjo – “Lady”.
+              </td>
+              <td class="artists-note">
+                Full explanation in the <a href="/french-touch-guide/">French Touch guide</a> + many tracks in the playlist.
+              </td>
+            </tr>
+            <tr id="electro-2000s">
+              <td class="artists-era">2000s<br/>Electro wave</td>
+              <td class="artists-list">
+                <strong>Justice</strong>, Vitalic, SebastiAn, Mr Oizo, Digitalism (FR-connected),
+                Busy P, Kavinsky, DJ Mehdi.
+              </td>
+              <td class="artists-note">
+                Justice – <em>Cross</em>; Vitalic – <em>OK Cowboy</em>; classics from Ed Banger &amp; associated labels.
+              </td>
+              <td class="artists-note">
+                Covered in the <a href="/history/">History of French electronic music</a> (section “The loud 2000s”).
+              </td>
+            </tr>
+            <tr id="cinematic-wave">
+              <td class="artists-era">2010–2025<br/>Cinematic wave</td>
+              <td class="artists-list">
+                <strong>Rone</strong>, The Blaze, Thylacine, French 79, NTO, Irène Drésel, Worakls, Fakear,
+                plus many emerging names.
+              </td>
+              <td class="artists-note">
+                Rone – <em>Tohu Bohu</em>, <em>Room with a View</em>; The Blaze – “Territory”, “Virile”; Thylacine – <em>Transsibérien</em>;
+                French 79 – “Diamond Veins”.
+              </td>
+              <td class="artists-note">
+                Detailed focus on the <a href="/cinematic-wave/">Cinematic wave</a> page, with context and examples.
+              </td>
+            </tr>
+            <tr>
+              <td class="artists-era">All eras<br/>Personal journey</td>
+              <td class="artists-list">
+                <strong>Vincent Bastille</strong> connects drum &amp; bass, ambient and club textures, in dialogue with all of the
+                movements above.
+              </td>
+              <td class="artists-note">
+                Liquid drum &amp; bass, cinematic ambient pieces and modern club tracks — see the releases linked in the book
+                and playlist.
+              </td>
+              <td class="artists-note">
+                Read the <a href="#vincent-bastille">spotlight section</a> below and explore the playlist to hear his tracks
+                next to the classics.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SPOTLIGHT VINCENT -->
+    <section id="vincent-bastille" class="spotlight">
+      <h2 class="section-title">Spotlight: Vincent Bastille</h2>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:1rem;">
+        Behind this guide is <strong>Vincent Bastille</strong>, a French electronic producer, DJ and sound designer who
+        has written more than 400 tracks across liquid drum &amp; bass, ambient and club-oriented music. His work often
+        sits in the same emotional space as the cinematic wave – long arcs, strong themes, and a dialogue between
+        rhythm and atmosphere.
+      </p>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:1rem;">
+        The idea of the project is simple: place his music inside a broader lineage rather than in a vacuum. The
+        playlist and the upcoming Kindle book both treat French electronic music as a living tradition — not nostalgia,
+        but a set of tools and emotions being re-used today.
+      </p>
+      <p style="color:var(--muted);font-size:.9rem;">
+        If you discovered this site via streaming or social media and want to go deeper, the
+        <a href="/kindle/index.html">book version</a> expands each era with more context, track-by-track notes,
+        and personal insights from the studio.
+      </p>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section>
+      <h2 class="section-title">How to use this site</h2>
+      <ol style="color:var(--muted);line-height:1.7;padding-left:1.2rem;">
+        <li>Read the <a href="/history/">History of French electronic music</a> once, from start to finish.</li>
+        <li>Keep the <a href="https://open.spotify.com/playlist/XXXXXXXXXXXX" target="_blank" rel="noopener">playlist</a> open while you browse.</li>
+        <li>Use the <a href="/french-touch-guide/">French Touch guide</a> if you’re coming from house/disco.</li>
+        <li>Use the <a href="/cinematic-wave/">Cinematic wave</a> page if you’re more into images, film and emotion.</li>
+        <li>Save the <a href="/top-100/index.html">Top 100</a> page as a long-term listening roadmap.</li>
+      </ol>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© French Electronic Revolution — Created by Vincent Bastille</span>
+      <span>Updated for 1977–2025 · <a href="/sitemap.xml">Sitemap</a></span>
+    </footer>
+
+  </main>
 </body>
 </html>
