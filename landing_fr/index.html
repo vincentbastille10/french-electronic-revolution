@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Best French Electronic Artists (1977–2025) — Guide + Playlist</title>
-  <meta name="description" content="Bilingual guide to the key French electronic artists — from Jean-Michel Jarre to Daft Punk, from Justice to the new generation — plus a focus on Vincent Bastille (French Electronic Producer, 400+ tracks, liquid dnb, cinematic ambient).">
+  <meta name="description" content="Dark, cinematic guide to the key French electronic artists — from Jean-Michel Jarre to Daft Punk, from Justice to the new scene — plus a deep spotlight on Vincent Bastille (French Electronic Producer, 400+ tracks, liquid dnb, cinematic ambient, club remixes).">
   <link rel="icon" href="/static/images/favicon.png" />
   <meta property="og:title" content="Best French Electronic Artists (1977–2025)" />
   <meta property="og:description" content="Pioneers, French Touch, new scene & a detailed spotlight on Vincent Bastille. Includes a French Touch 1977–2025 playlist and a Kindle-ready book." />
@@ -12,18 +12,24 @@
   <meta property="og:image" content="/static/images/cover.png" />
   <style>
     :root{
-      --bg:#020617;--fg:#e5e7eb;--accent:#38bdf8;--accent-soft:rgba(56,189,248,.14);
-      --border-soft:rgba(148,163,184,.4);--muted:#9ca3af;--card-bg:rgba(15,23,42,.86);
+      --bg:#020617;--fg:#e5e7eb;--accent:#38bdf8;--accent2:#4ade80;
+      --accent-soft:rgba(56,189,248,.14);
+      --border-soft:rgba(148,163,184,.4);--muted:#9ca3af;--card-bg:rgba(15,23,42,.96);
+      --chip-bg:rgba(15,23,42,.92);
     }
     *{box-sizing:border-box}
     body{
-      margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
-      background:radial-gradient(circle at top,#0f172a 0,#020617 55%,#000 100%);
-      color:var(--fg);-webkit-font-smoothing:antialiased;
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+      background:
+        radial-gradient(circle at top,#020617 0,#000 55%),
+        radial-gradient(circle at bottom,#020617 0,#000 60%);
+      color:var(--fg);
+      -webkit-font-smoothing:antialiased;
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    main.page{max-width:1120px;margin:0 auto;padding:1.8rem 1.25rem 3rem}
+    main.page{max-width:1120px;margin:0 auto;padding:1.8rem 1.25rem 3.4rem}
     header.hero{
       display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1.1fr);
       gap:2.5rem;align-items:center;margin-bottom:3rem;
@@ -39,96 +45,136 @@
     }
     .pill-dot{
       width:.45rem;height:.45rem;border-radius:999px;background:var(--accent);
-      box-shadow:0 0 18px rgba(56,189,248,.7);
+      box-shadow:0 0 18px rgba(56,189,248,.9);
     }
     h1{font-size:clamp(2rem,3vw,2.7rem);line-height:1.1;margin:0 0 .75rem}
-    .hero-subtitle{font-size:.98rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem}
+    .hero-subtitle{font-size:.98rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
     .hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
     .btn-primary,.btn-secondary{
       padding:.7rem 1.3rem;border-radius:999px;font-size:.9rem;
       display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
+      transition:transform .12s ease,box-shadow .12s ease,background .12s ease;
+      white-space:nowrap;
     }
     .btn-primary{
-      border:1px solid transparent;background:linear-gradient(135deg,#38bdf8,#4ade80);
-      color:#0f172a;font-weight:600;box-shadow:0 12px 30px rgba(56,189,248,.35);
+      border:1px solid transparent;
+      background:radial-gradient(circle at top left,var(--accent),var(--accent2));
+      color:#0f172a;font-weight:600;
+      box-shadow:0 14px 35px rgba(56,189,248,.45);
     }
     .btn-secondary{
-      border:1px solid var(--border-soft);background:rgba(15,23,42,.85);color:var(--fg);
+      border:1px solid var(--border-soft);
+      background:rgba(15,23,42,.9);color:var(--fg);
+    }
+    .btn-primary:hover,.btn-secondary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 18px 40px rgba(15,23,42,.9);
     }
     .hero-note{font-size:.8rem;color:var(--muted)}
     .hero-card{
       border-radius:1.25rem;border:1px solid var(--border-soft);
-      background:radial-gradient(circle at top left,rgba(56,189,248,.15),transparent 55%),
-                 radial-gradient(circle at bottom right,rgba(248,250,252,.05),transparent 60%),
-                 var(--card-bg);
-      padding:1.3rem 1.3rem 1.5rem;box-shadow:0 20px 45px rgba(15,23,42,.8);
+      background:
+        radial-gradient(circle at top left,rgba(56,189,248,.22),transparent 55%),
+        radial-gradient(circle at bottom right,rgba(248,250,252,.06),transparent 60%),
+        var(--card-bg);
+      padding:1.3rem 1.3rem 1.5rem;
+      box-shadow:0 26px 55px rgba(0,0,0,.9);
     }
     .hero-tagline{
       font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;
       color:var(--muted);margin-bottom:.5rem;
     }
-    .hero-quote{font-size:.9rem;line-height:1.6;margin:0}
+    .hero-quote{font-size:.9rem;line-height:1.7;margin:0}
     .hero-metric-row{
       display:flex;justify-content:space-between;gap:1rem;margin-top:.9rem;
       font-size:.78rem;color:var(--muted);
     }
     .hero-metric strong{display:block;font-size:.95rem;color:var(--fg)}
-    .section{margin-bottom:2.6rem}
+    .section{margin-bottom:2.7rem}
     .section h2{font-size:1.35rem;margin:0 0 .7rem}
-    .section p{font-size:.96rem;line-height:1.7;color:var(--muted);margin:0 0 .8rem}
+    .section p{font-size:.96rem;line-height:1.8;color:var(--muted);margin:0 0 .85rem}
     .chips-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem}
     .chip{
       padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(148,163,184,.6);
-      font-size:.75rem;color:var(--muted);background:rgba(15,23,42,.92);
+      font-size:.75rem;color:var(--muted);background:var(--chip-bg);
     }
     .artist-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:1.1rem;
     }
     .artist-card{
-      border-radius:1rem;border:1px solid rgba(31,41,55,.9);
-      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.86));
-      padding:.9rem 1rem 1rem;display:grid;grid-template-columns:64px minmax(0,1fr);
+      border-radius:1rem;border:1px solid rgba(31,41,55,.95);
+      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));
+      padding:.95rem 1.05rem 1.1rem;
+      display:grid;grid-template-columns:64px minmax(0,1fr);
       gap:.75rem;align-items:flex-start;
+      box-shadow:0 18px 40px rgba(0,0,0,.85);
     }
     .artist-card img{
       width:64px;height:64px;border-radius:.8rem;object-fit:cover;
-      border:1px solid rgba(148,163,184,.6);
+      border:1px solid rgba(148,163,184,.7);
     }
     .artist-card h3{margin:0 0 .25rem;font-size:.98rem}
     .artist-card .tag{
       display:inline-flex;padding:.15rem .55rem;border-radius:999px;
-      background:rgba(15,23,42,.9);border:1px solid rgba(148,163,184,.6);
+      background:rgba(15,23,42,.98);border:1px solid rgba(148,163,184,.7);
       font-size:.65rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);
       margin-bottom:.35rem;
     }
-    .artist-card p{margin:0;font-size:.85rem;line-height:1.5;color:var(--muted)}
+    .artist-card p{margin:0;font-size:.84rem;line-height:1.6;color:var(--muted)}
     .vincent-highlight{
       border-radius:1.25rem;border:1px solid var(--accent);
-      background:radial-gradient(circle at top left,var(--accent-soft),transparent 55%),
-                 rgba(15,23,42,.96);
-      padding:1.2rem 1.25rem 1.4rem;display:grid;
+      background:
+        radial-gradient(circle at top left,var(--accent-soft),transparent 55%),
+        rgba(15,23,42,.98);
+      padding:1.25rem 1.3rem 1.4rem;display:grid;
       grid-template-columns:80px minmax(0,1fr);gap:.9rem;align-items:flex-start;
-      margin-top:1.4rem;
+      margin-top:1.5rem;
+      box-shadow:0 26px 60px rgba(0,0,0,.95);
     }
     .vincent-highlight img{
       width:80px;height:80px;border-radius:1rem;object-fit:cover;
-      border:1px solid rgba(148,163,184,.7);
+      border:1px solid rgba(148,163,184,.85);
     }
     .vincent-highlight h3{margin:0 0 .4rem;font-size:1.08rem}
     .vincent-highlight p{margin:0 0 .6rem;font-size:.9rem;color:var(--muted)}
     .vincent-albums{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.7rem}
     .vincent-pill{
-      padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(148,163,184,.7);
-      font-size:.76rem;background:rgba(15,23,42,.95);color:var(--fg);
+      padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(148,163,184,.85);
+      font-size:.76rem;background:rgba(15,23,42,.98);color:var(--fg);
     }
     .playlist-block{
-      border-radius:1.1rem;border:1px dashed rgba(148,163,184,.7);
-      padding:1rem 1.1rem;background:rgba(15,23,42,.92);
+      border-radius:1.1rem;border:1px dashed rgba(148,163,184,.8);
+      padding:1rem 1.1rem;background:rgba(15,23,42,.96);
       font-size:.9rem;color:var(--muted);
+      box-shadow:0 18px 40px rgba(0,0,0,.85);
+    }
+    /* Bastille tracks section */
+    .tracks-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.1rem;margin-top:1rem;
+    }
+    .track-card{
+      border-radius:1rem;
+      border:1px solid rgba(51,65,85,.95);
+      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));
+      padding:.9rem 1rem 1.05rem;
+      box-shadow:0 18px 40px rgba(0,0,0,.9);
+    }
+    .track-title{margin:0 0 .2rem;font-size:.96rem}
+    .track-tag{
+      font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;
+      color:var(--muted);margin-bottom:.35rem;
+    }
+    .track-desc{font-size:.86rem;color:var(--muted);line-height:1.6;margin:0 0 .6rem}
+    .track-cta{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:.4rem .85rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.8);
+      font-size:.78rem;background:rgba(15,23,42,.98);
     }
     footer{
-      border-top:1px solid rgba(31,41,55,.95);margin-top:2.4rem;padding-top:1.4rem;
+      border-top:1px solid rgba(31,41,55,.95);margin-top:2.6rem;padding-top:1.4rem;
       font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;
       justify-content:space-between;gap:.75rem;
     }
@@ -144,29 +190,28 @@
         </div>
         <h1>Best French Electronic Artists (1977–2025)</h1>
         <p class="hero-subtitle">
-          A fast, opinionated guide to the artists who shaped French electronic music — from
-          Jean-Michel Jarre and Cerrone to Daft Punk, Air, Justice, Rone and the new scene — 
-          with a spotlight on <strong>Vincent Bastille (French Electronic Producer)</strong>,
-          a producer with 400+ tracks spanning liquid drum &amp; bass, cinematic ambient and
-          modern French Touch.
+          A dark, cinematic guide to the artists who shaped French electronic music — from
+          Jean-Michel Jarre and Cerrone to Daft Punk, Air, Justice, Rone and the new scene —
+          with a spotlight on <strong>Vincent Bastille</strong>, a French electronic producer
+          with 400+ tracks spanning liquid drum &amp; bass, cinematic ambient and modern club music.
         </p>
         <div class="hero-cta">
           <a class="btn-primary" href="#" target="_blank" rel="noreferrer">
             🎧 French Touch 1977–2025 Playlist
           </a>
           <a class="btn-secondary" href="/kindle/book_en.md" target="_blank" rel="noreferrer">
-            📘 Read the book (text version)
+            📘 Read the book (Kindle text)
           </a>
         </div>
         <p class="hero-note">
-          EN version · French version is available in <code>/landing_fr</code>.
+          EN version · French version is available in <code>/landing_fr</code> if you want a bilingual SEO setup.
         </p>
       </div>
       <aside class="hero-card">
         <div class="hero-tagline">What you get here</div>
         <p class="hero-quote">
           • A curated list of key French electronic artists with real-world context
-          (albums, important tracks).<br>
+          (albums, important tracks, why they matter).<br>
           • A simple timeline: pioneers, French Touch, “electroshock” and the new wave.<br>
           • A detailed spotlight on Vincent Bastille and his 400+ tracks.<br>
           • A Kindle-ready text file if you want to publish a 2€ guide on Amazon.
@@ -191,16 +236,18 @@
     <section class="section">
       <h2>Why French electronic music is different</h2>
       <p>
-        French electronic music didn’t just grow out of clubs. It’s a mix of classical
-        composition, chanson, cinema and rave culture. That’s why so many French records
-        feel both melodic and visual — like little films made of synths.
+        French electronic music did not just grow out of dark clubs. It comes from a strange,
+        fertile mix of classical composition, chanson, cinema and rave culture. This tension
+        between brain and body, melody and machine, is what gives many French records their
+        particular flavour.
       </p>
       <p>
-        From <strong>Jean-Michel Jarre</strong> and his massive outdoor concerts to
+        From <strong>Jean-Michel Jarre</strong> and his massive outdoor shows to
         <strong>Daft Punk</strong> and the French Touch, from the distortion of
         <strong>Justice / Vitalic</strong> to the emotional landscapes of
-        <strong>Rone</strong> or <strong>French 79</strong>, this guide helps you map
-        the territory — and shows where Vincent Bastille fits in.
+        <strong>Rone</strong> or <strong>French 79</strong>, this page is a listening map.
+        It shows where everything started, how it evolved, and where a producer like
+        <strong>Vincent Bastille</strong> can sit naturally in that continuum.
       </p>
       <div class="chips-row">
         <span class="chip">Jean-Michel Jarre</span>
@@ -222,11 +269,11 @@
     </section>
 
     <section class="section">
-      <h2>Selected artists</h2>
+      <h2>Key artists — extended notes</h2>
       <p>
-        Each card below corresponds to an artist featured in the book. The images are AI-style
-        placeholders: feel free to replace them with real photos or album covers, as long as
-        you keep the same file names.
+        These notes are not meant to be exhaustive biographies. Think of them as small
+        cinematic shots: enough information to understand why each artist is important and
+        what kind of mood they bring to a playlist.
       </p>
 
       <div class="artist-grid">
@@ -237,9 +284,13 @@
             <div class="tag">Pioneer</div>
             <h3>Jean-Michel Jarre</h3>
             <p>
-              French composer and electronic music icon. Albums like <em>Oxygène</em> (1976)
-              and <em>Équinoxe</em> (1978) brought poetic, spacey electronic music to a very
-              large audience, supported by huge outdoor shows.
+              French composer and electronic music icon, Jean-Michel Jarre brought synthesizers
+              into mainstream culture with albums like <em>Oxygène</em> (1976) and
+              <em>Équinoxe</em> (1978). His music is spacious, melodic and strangely intimate,
+              even when played in front of millions of people.
+              Over the years he has turned cities into stages, projecting lasers onto skylines
+              and treating urban landscapes as giant, temporary instruments. For many listeners,
+              he is the gateway into European electronic music.
             </p>
           </div>
         </article>
@@ -251,9 +302,12 @@
             <div class="tag">Disco &amp; proto-house</div>
             <h3>Cerrone</h3>
             <p>
-              Drummer, composer and producer. Tracks like <em>Supernature</em> (1977) made him
-              a key figure of disco and helped shape the sound that would later feed into the
-              French Touch movement.
+              Cerrone&apos;s <em>Supernature</em> (1977) is a cornerstone of electronic disco:
+              heavy drums, synthetic strings and a dark, almost sci-fi atmosphere. His records
+              sit somewhere between a club soundtrack and a cult movie score.
+              Beyond the hits, his way of building long, evolving grooves has influenced
+              generations of house and French Touch producers. You can hear echoes of his work
+              in countless filtered basslines and string stabs.
             </p>
           </div>
         </article>
@@ -265,9 +319,13 @@
             <div class="tag">French Touch</div>
             <h3>Daft Punk</h3>
             <p>
-              The duo that pushed French house worldwide. <em>Homework</em> (1997) and
-              <em>Discovery</em> (2001) mix house, disco and funk with a robotic, pop-friendly
-              aesthetic that became instantly recognisable.
+              With <em>Homework</em> (1997) and <em>Discovery</em> (2001), Daft Punk turned
+              Parisian house into global pop. Their tracks blend club loops, disco samples and
+              a sense of childhood wonder that makes even the roughest beats feel emotional.
+              The robot helmets, anime videos and live shows are not just marketing tricks:
+              they extend the music into a full universe where nostalgia, sci-fi and
+              dancefloor energy coexist. Almost every French producer after them has had to
+              position themselves in relation to Daft Punk.
             </p>
           </div>
         </article>
@@ -279,8 +337,13 @@
             <div class="tag">Electronica</div>
             <h3>Air</h3>
             <p>
-              French ambient-pop duo. <em>Moon Safari</em> (1998) is a global classic, full of
-              lush, slow-motion tracks that influenced chill-out, advertising and film music.
+              Air&apos;s <em>Moon Safari</em> (1998) is one of the most influential down-tempo
+              albums of the late 90s. Tracks like <em>Sexy Boy</em> and
+              <em>La Femme d&apos;Argent</em> defined a whole idea of &quot;French chill music&quot;:
+              warm, slightly melancholic, and very visual.
+              Their work sits at the intersection of pop songwriting, sound design and film
+              music. It has been endlessly referenced in advertising, TV and cinema, which
+              helped spread the &quot;French electronic&quot; feel far beyond club culture.
             </p>
           </div>
         </article>
@@ -292,8 +355,12 @@
             <div class="tag">Techno</div>
             <h3>Laurent Garnier</h3>
             <p>
-              Key techno DJ and producer connecting Detroit, Manchester and Paris. Known for
-              long, emotionally rich sets and tracks like <em>The Man With The Red Face</em>.
+              Laurent Garnier is one of the most respected techno DJs and producers in Europe.
+              His sets can last for hours, moving from deep house to pounding techno while
+              keeping a strong emotional narrative.
+              Tracks like <em>The Man With The Red Face</em> capture his ability to inject
+              jazz, melancholy and tension into club music. He is also a storyteller and
+              historian of the scene, constantly linking Detroit, Manchester and Paris.
             </p>
           </div>
         </article>
@@ -305,8 +372,12 @@
             <div class="tag">House &amp; jazz</div>
             <h3>St Germain</h3>
             <p>
-              Project of Ludovic Navarre. The album <em>Tourist</em> (2000) blends house, jazz
-              and blues into a warm, timeless record often played in bars, restaurants and lounges.
+              Under the name St Germain, Ludovic Navarre created a unique blend of house,
+              jazz and blues. The album <em>Tourist</em> (2000) became a global reference,
+              often played in bars, restaurants and lounges for more than a decade.
+              What makes his music special is the balance between organic instruments and
+              electronic grooves. It feels sophisticated without being cold, making it a
+              perfect bridge between club culture and everyday life.
             </p>
           </div>
         </article>
@@ -318,9 +389,13 @@
             <div class="tag">Electro-rock</div>
             <h3>Justice</h3>
             <p>
-              French duo associated with Ed Banger Records. Their debut album
-              <em>Cross</em> (2007) combined distorted electro, rock energy and strong visuals,
-              becoming a symbol of a “second wave” of French Touch.
+              Justice arrived in the mid-2000s with a sound that was almost violent compared
+              to the previous wave of French Touch: distorted bass, clipped drums, riffs
+              inspired by rock and metal. Their debut album <em>Cross</em> (2007) felt like a
+              manifesto for a new, maximalist electronic era.
+              Visually, the cross logo, stage design and music videos turned the duo into a
+              kind of electronic rock band. Their influence can still be heard in festival-ready
+              electro and modern EDM.
             </p>
           </div>
         </article>
@@ -329,11 +404,15 @@
         <article class="artist-card">
           <img src="/static/images/vitalic.png" alt="Vitalic" />
           <div>
-            <div class="tag">Electro/Techno</div>
+            <div class="tag">Electro / Techno</div>
             <h3>Vitalic</h3>
             <p>
-              French producer known for heavy, melodic electronic tracks. The album
-              <em>OK Cowboy</em> (2005) features club staples like <em>La Rock 01</em>.
+              Vitalic&apos;s tracks sit somewhere between techno, electro and EBM, but always
+              with a strong melodic hook. <em>OK Cowboy</em> (2005) is packed with anthems
+              like <em>La Rock 01</em> that still destroy dancefloors many years later.
+              His sound design is intense but never purely aggressive; there is humour, drama
+              and a sense of storytelling in the way his synth lines evolve. He embodies the
+              idea that club music can be both brutal and emotional.
             </p>
           </div>
         </article>
@@ -345,8 +424,13 @@
             <div class="tag">New scene</div>
             <h3>Rone</h3>
             <p>
-              Electronica producer with a strong visual and cinematic approach. His work often
-              involves collaborations with filmmakers, choreographers and orchestras.
+              Rone represents a new wave of French electronica that is deeply connected to
+              cinema, contemporary dance and live performance. His track
+              <em>Bye Bye Macadam</em> became a small classic thanks to its haunting melody
+              and striking animated video.
+              Over time he has worked with orchestras, choreographers and filmmakers, turning
+              his music into a multi-disciplinary project. For listeners, he is a bridge
+              between club culture and experimental art.
             </p>
           </div>
         </article>
@@ -358,8 +442,12 @@
             <div class="tag">Synth-pop</div>
             <h3>French 79</h3>
             <p>
-              Project of Marseille-based producer Simon Henner. Bright, melodic synth music,
-              with tracks like <em>Diamond Veins</em> reaching a wide audience online.
+              French 79, the project of Marseille-based producer Simon Henner, crafts bright,
+              melodic synth music that often feels like the soundtrack to an imaginary movie
+              shot on the Mediterranean coast.
+              Tracks such as <em>Diamond Veins</em> and <em>Hometown</em> have travelled far
+              beyond the underground thanks to streaming and sync placements. His sound shows
+              how French electronic music can be colourful, positive and still emotionally rich.
             </p>
           </div>
         </article>
@@ -371,8 +459,11 @@
             <div class="tag">Travel electronics</div>
             <h3>Thylacine</h3>
             <p>
-              Producer who often writes music while travelling (trains, road trips). His work
-              blends melodic techno with on-location recordings and a sense of journey.
+              Thylacine often writes music while travelling — on trains, in vans, across cold
+              landscapes or desert roads. You can hear that movement in his tracks: long,
+              evolving structures, field recordings, a constant feeling of departure.
+              His work is melodic techno but also a travel diary. It appeals to listeners who
+              like the idea that club music can carry memories of specific places and journeys.
             </p>
           </div>
         </article>
@@ -384,8 +475,12 @@
             <div class="tag">Melodic techno</div>
             <h3>NTO</h3>
             <p>
-              Associated with Hungry Music, he produces emotional, melodic techno widely played
-              in European clubs and festivals.
+              NTO, often associated with the Hungry Music label, writes long, emotional tracks
+              that build slowly and hit very hard at the right moment. His music is designed
+              for big stages but keeps a strong sense of intimacy.
+              Tracks like <em>Invisible</em> are perfect examples of what modern melodic techno
+              can be: hypnotic, detailed and surprisingly touching when played at the right time
+              in a set.
             </p>
           </div>
         </article>
@@ -397,8 +492,12 @@
             <div class="tag">Synthwave</div>
             <h3>Kavinsky</h3>
             <p>
-              Known for his retro-futuristic universe. The track <em>Nightcall</em>, featured
-              in the film <em>Drive</em>, helped popularise the synthwave sound worldwide.
+              Kavinsky built a retro-futuristic universe populated by fast cars, neon lights
+              and haunted highways. <em>Nightcall</em>, used in the film <em>Drive</em>,
+              became a defining track for the global synthwave movement.
+              His music shows another face of French electronics: nostalgic, cinematic and
+              focused on mood as much as on rhythm. It is less about clubs and more about
+              building a strong visual world in the listener&apos;s mind.
             </p>
           </div>
         </article>
@@ -410,8 +509,12 @@
             <div class="tag">Image &amp; emotion</div>
             <h3>The Blaze</h3>
             <p>
-              Duo focusing on both sound and image. Their videos (like <em>Territory</em>)
-              are short films exploring masculinity, family and belonging over slow-burning house.
+              The Blaze are as much filmmakers as they are music producers. Videos like
+              <em>Territory</em> and <em>Virile</em> portray masculinity, friendship and family
+              with a tenderness rarely seen in dance music.
+              Their tracks are slow-burning, somewhere between house and ambient, perfectly
+              designed to carry those images. They show how French electronic music can be a
+              tool to explore identity and relationships, not just nightlife.
             </p>
           </div>
         </article>
@@ -422,18 +525,17 @@
         <div>
           <h3>Vincent Bastille — French Electronic Producer (400+ tracks)</h3>
           <p>
-            DJ, composer, sound designer and filmmaker, Vincent Bastille builds his music like
-            scenes in a movie. With more than <strong>400 tracks</strong> released online, he
-            explores liquid drum &amp; bass, cinematic ambient, club tracks and remixes.
+            Vincent Bastille is a French electronic producer who approaches music like a
+            filmmaker. With more than <strong>400 tracks</strong> released online, he navigates
+            between melancholic liquid drum &amp; bass, ambient soundtracks, efficient club music
+            and adventurous remixes.
           </p>
           <p>
-            Suggested entry points:
-            <br>- <strong>“Under Beaten”</strong> — melancholic liquid dnb (Bandcamp).
-            <br>- <strong>“Born This Way (Brown &amp; Kraft Remix)”</strong> — efficient tech house (Spotify).
-            <br>- <strong>“Wesh alors” (Jul Remix)</strong> — playful nod to French pop culture (Bandcamp).
-            <br>- <strong><em>Le Lac — OST</em></strong> — full cinematic ambient album.
-            <br>- <strong>Collab with Jennifer Lopez</strong> — over 4M streams.
-            <br>- <strong>“Peter Tools”</strong> — one of his most direct club tracks.
+            His catalogue includes underground DnB cuts, full original soundtracks for films and
+            dance pieces, playful reworks of French pop and a collaboration with
+            <strong>Jennifer Lopez</strong> that has generated more than <strong>4 million
+            streams</strong>. The common thread is a sense of scene: each track feels like a
+            moment stolen from a larger story.
           </p>
           <div class="vincent-albums">
             <span class="vincent-pill">Le Lac — OST</span>
@@ -441,10 +543,107 @@
             <span class="vincent-pill">Wondering Stars</span>
             <span class="vincent-pill">Anamnesis</span>
           </div>
-          <a class="btn-primary" href="#" target="_blank" rel="noreferrer">
+          <a class="btn-primary" href="https://vincentbastille.bandcamp.com" target="_blank" rel="noreferrer">
             🎧 Listen to Vincent Bastille (Spotify / Bandcamp)
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: DISCOVER VINCENT BASTILLE TRACKS -->
+    <section class="section">
+      <h2>Discover Vincent Bastille — selected tracks</h2>
+      <p>
+        If you want a quick way in, start with these six tracks. They cover different sides of
+        his work: liquid DnB for headphones at night, club-ready remixes, and full cinematic
+        soundtracks that link back to the French tradition of electronic music for image.
+      </p>
+
+      <div class="tracks-grid">
+        <!-- Under Beaten -->
+        <article class="track-card">
+          <div class="track-tag">Liquid Drum &amp; Bass · melancholic</div>
+          <h3 class="track-title">Under Beaten (preview)</h3>
+          <p class="track-desc">
+            A slow-burning liquid DnB piece that leans into melancholy rather than aggression.
+            Detailed drum work, soft pads and a sense of suspended time make it perfect for
+            late-night listening or deep-focus playlists.
+          </p>
+          <a class="track-cta" href="https://vincentbastille.bandcamp.com/track/under-beaten-preview" target="_blank" rel="noreferrer">
+            🎧 Listen on Bandcamp
+          </a>
+        </article>
+
+        <!-- Born This Way remix -->
+        <article class="track-card">
+          <div class="track-tag">Tech House · club</div>
+          <h3 class="track-title">Born This Way (Brown &amp; Kraft Remix)</h3>
+          <p class="track-desc">
+            An efficient tech-house weapon built for the dancefloor: tight drums, a rolling
+            groove and just enough vocal energy to connect instantly with the crowd. This is
+            the &quot;DJ side&quot; of Vincent Bastille.
+          </p>
+          <a class="track-cta" href="https://open.spotify.com/intl-fr/track/13x4OVJ7NadscahVj7NGxh" target="_blank" rel="noreferrer">
+            🎧 Listen on Spotify
+          </a>
+        </article>
+
+        <!-- Jul remix -->
+        <article class="track-card">
+          <div class="track-tag">French pop · rework</div>
+          <h3 class="track-title">Jul – Wesh Alors (Vincent Bastille Remix)</h3>
+          <p class="track-desc">
+            A playful remix that takes a massively popular French track and rebuilds it with
+            a more detailed, electronic architecture. It shows how Bastille can dialogue with
+            mainstream culture while keeping his own sound.
+          </p>
+          <a class="track-cta" href="https://vincentbastille.bandcamp.com/track/jul-wesh-alors-vincent-bastille-remix" target="_blank" rel="noreferrer">
+            🎧 Listen on Bandcamp
+          </a>
+        </article>
+
+        <!-- Le Lac OST -->
+        <article class="track-card">
+          <div class="track-tag">Ambient / OST</div>
+          <h3 class="track-title">Le Lac — Original Motion Picture Soundtrack</h3>
+          <p class="track-desc">
+            A full ambient soundtrack sitting somewhere between Art Of Noise, The Orb and FSOL.
+            Built for a film, it works just as well on its own as a long, immersive listening
+            experience, connecting Vincent Bastille to the tradition of French electronic music
+            for cinema.
+          </p>
+          <a class="track-cta" href="https://vincentbastille.bandcamp.com/album/le-lac-ost-2" target="_blank" rel="noreferrer">
+            🎧 Listen to the album on Bandcamp
+          </a>
+        </article>
+
+        <!-- JLo collab -->
+        <article class="track-card">
+          <div class="track-tag">Pop collab · 4M+ streams</div>
+          <h3 class="track-title">Jennifer Lopez — collaboration</h3>
+          <p class="track-desc">
+            Proof that his sound can live inside global pop: this collaboration with
+            Jennifer Lopez has already crossed four million streams. It shows how Bastille&apos;s
+            production can support a major artist while keeping a subtle electronic identity.
+          </p>
+          <a class="track-cta" href="https://open.spotify.com/intl-fr/track/0SePr6lCmi5JhyI28xi2BN" target="_blank" rel="noreferrer">
+            🎧 Listen on Spotify
+          </a>
+        </article>
+
+        <!-- Peter Tools -->
+        <article class="track-card">
+          <div class="track-tag">Club tool</div>
+          <h3 class="track-title">Peter Tools</h3>
+          <p class="track-desc">
+            One of his most direct club tracks: a stripped-down, addictive tool designed to
+            slide into DJ sets and push the energy up a notch. It works as a calling card for
+            his more straightforward, DJ-friendly side.
+          </p>
+          <a class="track-cta" href="https://open.spotify.com/intl-fr/track/3hK3mwuvE8kTZqO80cTBfm" target="_blank" rel="noreferrer">
+            🎧 Listen on Spotify
+          </a>
+        </article>
       </div>
     </section>
 
@@ -458,7 +657,8 @@
       <div class="playlist-block">
         <p style="margin-top:0;">
           Once the playlist exists on Spotify, simply replace the top button’s URL
-          (<em>French Touch 1977–2025 Playlist</em>) with the official link.
+          (<em>French Touch 1977–2025 Playlist</em>) with the official link. You can then
+          add this page to your link-in-bio or EPK and let the story + playlist do the work.
         </p>
       </div>
     </section>
